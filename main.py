@@ -3,10 +3,11 @@ from telethon import TelegramClient, events
 # ==========================================
 # 1. CONFIGURATION
 # ==========================================
-API_ID = 2172759  # Replace with your API ID from my.telegram.org
-API_HASH = '06734ed5b53ec321c64b752c75052117'  # Replace with your API Hash
-BOT_TOKEN = '8695085393:AAFIMEnY_mDC9UgXxffQNx58uAqecVgMdA4'  # Replace with your Bot Token from @BotFather
+import os
 
+API_ID = int(os.getenv("API_ID", "2172759"))
+API_HASH = os.getenv("API_HASH", "06734ed5b53ec321c64b752c75052117")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 # ID of your private channel. 
 # Private channel IDs in Telegram always start with -100
 DESTINATION_CHANNEL = -1003977878474 
